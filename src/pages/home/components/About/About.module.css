@@ -1,0 +1,132 @@
+.aboutContainer {
+  margin-top: 100px;
+  padding-bottom: 36px;
+  height: 584px;
+  background-color: #fffbd8;
+  align-items: center;
+}
+
+.aboutContainer h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 36px 54px;
+  margin: 0 110.5px;
+}
+
+.card {
+  flex: 1;
+  margin: 0 1em;
+}
+
+.card div {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card span {
+  font-size: 18px;
+}
+
+.helpCenter_btn {
+  font-weight: bold;
+  margin: 10px;
+  border: 2px solid black;
+  padding: 10px 15px;
+  border-radius: 100px;
+}
+
+.helpCenter_btn:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.emailNotiContainer {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  height: 150px;
+  background-color: rgb(204, 235, 255);
+  align-items: center;
+}
+
+.emailNotiContainer h2 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.searchBoxEmail {
+  box-sizing: border-box;
+}
+
+.searchBoxEmail input {
+  background-color: white;
+  width: 365px;
+  padding: 10px;
+  border-radius: 50px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.searchBoxEmail button {
+  font-weight: bold;
+  background-color: white;
+  padding: 10px;
+  border-radius: 0px 50px 50px 0px;
+  border: 1px solid transparent;
+  transition: background-color 0.5s ease;
+  transition: border 0.3s ease;
+}
+
+.searchBoxEmail button:hover {
+  background-color: black;
+  color: white;
+}
+
+.searchBoxEmail input:focus + button {
+  color: white;
+  background-color: black;
+  transition: background-color 0.5s ease;
+}
+
+.searchBoxEmail input:hover {
+  border: 1px solid black;
+  border-right: 1px solid transparent;
+}
+
+.searchBoxEmail input:hover + button {
+  border: 1px solid black;
+  border-left: 1px solid transparent;
+}
+
+.renewableContainer {
+  padding: 24px 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(59, 103, 217);
+  display: flex;
+}
+
+.renewableContainer svg {
+  color: white;
+  fill: white;
+  margin-right: 10px;
+}
+
+.renewableContainer h2 {
+  color: white;
+  padding: 0px;
+  border-bottom: 2px dashed white;
+  text-decoration: none;
+  display: inline;
+}
+
+.renewableContainer svg:hover,
+.renewableContainer h2:hover {
+  cursor: help;
+}

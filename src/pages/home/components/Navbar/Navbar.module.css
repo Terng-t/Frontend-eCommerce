@@ -1,0 +1,232 @@
+.navbarContainer {
+  margin-top: 10px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  align-items: center;
+  font-size: 16px;
+}
+
+.navbarContainer h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.icon,
+.categories {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50px;
+  padding: 8px 14px;
+}
+
+.icon:hover,
+.categories:hover {
+  background-color: #eeeeee;
+}
+
+.iconBlue {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.iconBlue:hover {
+  background-color: #e0f7fa;
+}
+
+.navbarContainer h1 {
+  margin-right: 30px;
+  font-size: 40px;
+}
+
+.row {
+  border: 2px solid black;
+  display: flex;
+  border-radius: 50px;
+  width: 800px;
+  height: 50px;
+}
+
+.searchBarNavbar {
+  flex: 1;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  padding: 8px 15px;
+}
+
+.row input:hover + button {
+  padding: 7px;
+  border: 0px;
+  border-radius: 0px 50px 50px 0px;
+  background-color: rgb(241, 100, 30, 0.7);
+}
+
+.row input:focus + button {
+  padding: 7px;
+  border: 0px;
+  border-radius: 0px 50px 50px 0px;
+  background-color: rgb(241, 100, 30, 0.7);
+}
+
+.searchNavbar_btn {
+  background-color: rgb(241, 100, 30);
+  border-radius: 50px;
+  padding: 5px;
+  transition: border-radius 0.2s ease, background-color 0.2s ease;
+  border: 2px solid white;
+}
+
+.searchNavbar_btn:hover {
+  border-radius: 0px 50px 50px 0px;
+  background-color: rgb(241, 100, 30, 0.7);
+  padding: 7px;
+  border: 0px;
+}
+
+.searchNavbar_btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.loginContainer {
+  position: fixed;
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: popUp 0.3s ease-out forwards;
+}
+
+@keyframes popUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 50px;
+  width: 34px;
+  height: 34px;
+  padding: 24px;
+  background-color: transparent;
+  right: -80px;
+  top: 0;
+  position: absolute;
+  color: white;
+}
+
+.closeButton:hover {
+  background-color: rgb(255, 255, 255, 0.18);
+}
+
+.register_btn {
+  border: 2px solid black;
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: box-shadow 0.5s ease;
+}
+
+.register_btn:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.staySignInCheckBoxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.staySignInCheckBoxContainer input {
+  display: none;
+}
+
+.staySignInCheckBoxContainer div {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.staySignInCheckBoxContainer div::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 10px;
+  height: 5px;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.staySignInCheckBoxContainer input:checked + div {
+  background-color: black;
+}
+
+.staySignInCheckBoxContainer input:checked + div::after {
+  border-left: 3px solid white;
+  width: 18px;
+  height: 8px;
+  border-bottom: 3px solid white;
+  opacity: 1;
+}
+
+.staySignInCheckBoxContainer span {
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+.signIn_btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.socialLoginContainer button {
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 10px;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin: 5px 0px;
+  transition: box-shadow 0.5s ease;
+}
+
+.socialLoginContainer button:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}

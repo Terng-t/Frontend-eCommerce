@@ -1,0 +1,37 @@
+.label {
+  margin-left: 163px;
+}
+
+.cardContainer {
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.card {
+  width: 260px;
+  margin: 6px;
+  border: 2px solid #d5dbdb;
+  transition: box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.card img {
+  height: 200px;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
