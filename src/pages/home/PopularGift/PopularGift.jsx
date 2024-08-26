@@ -9,7 +9,7 @@ const PopularGift = () => {
       </div>
       <ul className={`${styles.cardContainer} flex`}>
         <li className={`${styles.card}`}>
-          <img src="https://i.etsystatic.com/14987170/r/il/5757f8/1935725966/il_340x270.1935725966_mi2k.jpg" />
+          <img src="https://i.etsystatic.com/11486790/r/il/09528c/2809353368/il_340x270.2809353368_l0rq.jpg" />
           <p>Anniversary gifts</p>
         </li>
         <li className={`${styles.card}`}>
@@ -17,7 +17,7 @@ const PopularGift = () => {
           <p>Gifts for him</p>
         </li>
         <li className={`${styles.card}`}>
-          <img src="https://i.etsystatic.com/6103559/r/il/3e4304/1384278263/il_340x270.1384278263_4d7d.jpg" />
+          <img src="https://i.etsystatic.com/37450997/r/il/869e9e/5039584689/il_340x270.5039584689_65iv.jpg" />
           <p>Gifts for her</p>
         </li>
         <li className={`${styles.card}`}>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
 
   const toggleLogin = () => {
     setIsLoginOpen(!isLoginOpen);
@@ -27,17 +29,25 @@ const Navbar = () => {
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
       closeLogin();
+      setIsCategoriesOpen(false);
     }
+  };
+
+  const toggleCategories = () => {
+    setIsCategoriesOpen(!isCategoriesOpen);
   };
   return (
     <>
-      <header
-        className={`${styles.navbarContainer} flex justify-center gap-6 mb-3`}
-      >
-        <h1 className="text-orange-600 mr-0">Etsy</h1>
-        <div className={`${styles.categories} flex mr-5`}>
-          <img src="src\images\menu.svg" />
-          <p>Categories</p>
+      <header className={`${styles.navbarContainer} mb-3`}>
+        <Link to="/">
+          <h1 className="text-orange-600 mr-0">Etsy</h1>
+        </Link>
+        <div
+          className={`${styles.categories} flex mr-5`}
+          onClick={toggleCategories}
+        >
+          <img className="w-[20px]" src="src\images\menu.svg" />
+          <p className="hover:cursor-pointer">Categories</p>
         </div>
         <div className={styles.search_box}>
           <form className={styles.row}>
@@ -59,76 +69,102 @@ const Navbar = () => {
           </li>
           <li className={styles.iconBlue}>
             <img src="src\images\heart.svg" alt="" />
+            <span className={styles.tooltip}>Favorite</span>
           </li>
           <li className={styles.iconBlue}>
             <img src="src\images\gift.svg" alt="" />
+            <span className={styles.tooltip}>Gift Mode</span>
           </li>
-          <li className={styles.iconBlue}>
-            <img src="src\images\cart.svg" alt="" />
-          </li>
+          <Link to="/cart">
+            <li className={styles.iconBlue}>
+              <img src="src\images\cart.svg" alt="cart" />
+            </li>
+          </Link>
         </ul>
       </header>
-      <nav>
-        <ul className="flex justify-center gap-4 border-b-[2px] pb-3">
-          <li className={`${styles.icon} flex`}>
-            <img src="src\images\gift.svg" alt="" />
-            &nbsp; Gift Mode
-          </li>
-          <li className={`${styles.icon}`}>Shop Birthday Gifts</li>
-          <li className={`${styles.icon}`}>Home Favorites</li>
-          <li className={`${styles.icon}`}>Fahsion Finds</li>
-          <li className={`${styles.icon}`}>Registry</li>
-        </ul>
-      </nav>
+      {isCategoriesOpen && (
+        <>
+          <div
+            className={styles.contentOverlay}
+            onClick={handleOverlayClick}
+          ></div>
+          <div className={`${styles.categoriesDropdown}`}>
+            <div className={styles.arrow}></div>
+            <ul className={styles.dropdownContent}>
+              <li>Accessories</li>
+              <li>Art & Collecibles</li>
+              <li>Baby</li>
+              <li>Bags & Purses</li>
+              <li>Bath & Beauty</li>
+              <li>Books, Movies & Music</li>
+              <li>Clothing</li>
+              <li>Craft Supplies & Tools</li>
+              <li>Electronics & Accessories</li>
+              <li>Gifts</li>
+              <li>Home & Living</li>
+              <li>Jewelry</li>
+              <li>Paper & Party Supplies</li>
+              <li>Pet Supplies</li>
+              <li>Shoes</li>
+              <li>Toys & Games</li>
+              <li>Weddings</li>
+            </ul>
+          </div>
+        </>
+      )}
+
       {isLoginOpen && (
         <>
           <div
             className={`${styles.overlay}`}
             onClick={handleOverlayClick}
           ></div>
-          <div className={`${styles.loginContainer} flex flex-col`}>
-            <div className="flex place-content-between items-center mb-[10px]">
-              <h2 className="text-[18px] font-bold">Sign in</h2>
-              <button className={`${styles.register_btn}`}>Register</button>
-            </div>
-            <form className="flex flex-col">
-              <label className="text-[15px]">Email address</label>
-              <input
-                className="border-2 border-gray-300 p-[10px] mb-[20px] rounded-xl"
-                type="email"
-              />
-              <label className="text-[15px]">Password</label>
-              <input
-                className="border-2 border-gray-300 mb-[15px] p-[10px] rounded-xl"
-                type="password"
-              />
-              <div className="flex place-content-between">
-                <label
-                  className={`${styles.staySignInCheckBoxContainer} mb-[20px]`}
-                >
-                  <input type="checkbox" />
-                  <div></div>
-                  <span>Stay signed in</span>
-                </label>
-                <span className="text-[14px] text-gray-500 underline underline-offset-1 hover:cursor-pointer mb-[20px] mt-[5px]">
-                  Forgot your password?
-                </span>
+          <div className={`${styles.signInPopupContainer}`}>
+            <div className={`${styles.loginContainer} flex flex-col`}>
+              <div className="flex place-content-between items-center mb-[10px]">
+                <h2 className="text-[18px] font-bold">Sign in</h2>
+                <button className={`${styles.register_btn}`}>Register</button>
               </div>
-              <button
-                className={`${styles.signIn_btn} items-center py-[13px] mx-[50px] rounded-full text-white bg-black`}
-              >
-                Sign in
-              </button>
-              <p className="text-center text-[14px] text-gray-500 underline underline-offset-1 hover:cursor-pointer mx-[98px] my-[15px]">
-                Trouble signing in?
-              </p>
-            </form>
-            <div className="flex mx-[-40px] my-[10px] items-center justify-center h-[1px] bg-gray-400">
-              <p className="px-[10px] text-[12px] text-gray-400 bg-white">OR</p>
+              <form className="flex flex-col">
+                <label className="text-[15px]">Email address</label>
+                <input
+                  className="border-2 border-gray-300 p-[10px] mb-[20px] rounded-xl"
+                  type="email"
+                />
+                <label className="text-[15px]">Password</label>
+                <input
+                  className="border-2 border-gray-300 mb-[15px] p-[10px] rounded-xl"
+                  type="password"
+                />
+                <div className="flex place-content-between">
+                  <label
+                    className={`${styles.staySignInCheckBoxContainer} mb-[20px]`}
+                  >
+                    <input type="checkbox" />
+                    <div></div>
+                    <span>Stay signed in</span>
+                  </label>
+                  <span className="text-[14px] text-gray-500 underline underline-offset-1 hover:cursor-pointer mb-[20px] mt-[5px]">
+                    Forgot your password?
+                  </span>
+                </div>
+                <button
+                  className={`${styles.signIn_btn} items-center py-[13px] mx-[50px] rounded-full text-white bg-black`}
+                >
+                  Sign in
+                </button>
+                <p className="text-center text-[14px] text-gray-500 underline underline-offset-1 hover:cursor-pointer mx-[98px] my-[15px]">
+                  Trouble signing in?
+                </p>
+              </form>
             </div>
+
             <div
               className={`${styles.socialLoginContainer} flex flex-col justify-center items-center mt-[15px]`}
             >
+              <div className="flex items-center justify-center w-[100%] h-[1px] my-[28px] bg-gray-400">
+                <p className="p-[5px] bg-white text-gray-400 text-[12px]">OR</p>
+              </div>
               <button className="flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -6,7 +6,9 @@
   margin-top: 20px;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
 }
+
 
 .card {
   width: 260px;

@@ -4,13 +4,13 @@ import styles from "./Homecontent.module.css";
 const HomeContent = () => {
   return (
     <>
-      <div className="flex grid-rows-6 w-full justify-center p-8">
+      <div className="flex grid-rows-6 justify-center p-8">
         <h1 className="text-3xl font-extralight">Check out the season's biggest trends</h1>
       </div>
       <ul
-        className={`${styles.cardContainer} flex gap-3 ml-60 mr-60 justify-center`}
+        className={`${styles.cardContainer} flex gap-3 justify-center inline-block`}
       >
-        <li className={`${styles.card} flex-col`}>
+        <li className={`${styles.card} flex-col justify-center`}>
           <img
             src="https://i.etsystatic.com/27836385/r/il/cc4d93/5399722545/il_300x300.5399722545_btaa.jpg"
             alt=""
