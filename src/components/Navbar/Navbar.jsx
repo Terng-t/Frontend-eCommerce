@@ -45,7 +45,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={`${styles.categories} flex`} onClick={toggleCategories}>
-          <span className="material-symbols-outlined" style={{ fontSize: 30 }}>
+          <span className="material-symbols-outlined" style={{ fontSize: 23 }}>
             menu
           </span>
           <p className="hover:cursor-pointer">Categories</p>
@@ -60,7 +60,7 @@ const Navbar = () => {
             <button className={`${styles.searchNavbar_btn}`}>
               <span
                 className="material-symbols-outlined"
-                style={{ fontSize: 32, color: 'white' }}
+                style={{ fontSize: 32, color: "white" }}
               >
                 search
               </span>{" "}
