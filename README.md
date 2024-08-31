@@ -27,10 +27,13 @@ To get started with this project, follow these steps:
    git clone https://github.com/your-username/etsy-clone.git
 
 2. **Navigate to the Project Directory
+   ```bash
      cd etsy-clone
 
 3. **Install Dependencies
+   ```bash
     npm install
 
 4. **Run the Development Server
-    npm run dev
+  ```bash
+   npm run dev
