@@ -38,7 +38,7 @@ const Footer = () => {
             <ul>
               <li>
                 <p>Shop</p>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined hidden">
                   keyboard_arrow_down
                 </span>
               </li>
@@ -69,7 +69,7 @@ const Footer = () => {
             <ul>
               <li>
                 <p>Sell</p>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined hidden">
                   keyboard_arrow_down
                 </span>
               </li>
@@ -91,7 +91,7 @@ const Footer = () => {
             <ul>
               <li>
                 <p>About</p>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined hidden">
                   keyboard_arrow_down
                 </span>
               </li>
@@ -119,7 +119,7 @@ const Footer = () => {
             <ul>
               <li>
                 <p>Help</p>
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined hidden">
                   keyboard_arrow_down
                 </span>
               </li>
