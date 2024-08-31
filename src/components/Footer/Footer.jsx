@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <>
-    <div className={`${styles.emailNotiContainer}`}>
+      <div className={`${styles.emailNotiContainer}`}>
         <h2>
           Yes! Send me exclusive offers, unique gift ideas, and personalized
           tips for shopping and selling on Etsy.
@@ -36,7 +36,12 @@ const Footer = () => {
         <div className={`${styles.footerCategoriesContainer} flex`}>
           <div className={`${styles.footerCategory}`}>
             <ul>
-              <li>Shop</li>
+              <li>
+                <p>Shop</p>
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </li>
               <li>
                 <span>Gift cards</span>
               </li>
@@ -62,7 +67,12 @@ const Footer = () => {
           </div>
           <div className={`${styles.footerCategory}`}>
             <ul>
-              <li>Sell</li>
+              <li>
+                <p>Sell</p>
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </li>
               <li>
                 <span>sell on Etsy</span>
               </li>
@@ -79,7 +89,12 @@ const Footer = () => {
           </div>
           <div className={`${styles.footerCategory}`}>
             <ul>
-              <li>About</li>
+              <li>
+                <p>About</p>
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </li>
               <li>
                 <span>Etsy, inc.</span>
               </li>
@@ -102,7 +117,12 @@ const Footer = () => {
           </div>
           <div className={`${styles.footerCategory}`}>
             <ul>
-              <li>Help</li>
+              <li>
+                <p>Help</p>
+                <span class="material-symbols-outlined">
+                  keyboard_arrow_down
+                </span>
+              </li>
               <li>
                 <span>Help Center</span>
               </li>
