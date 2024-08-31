@@ -17,4 +17,20 @@ Welcome to the Etsy Clone project! This project is a UI-focused replica of the p
 - **Responsive Design Mastery**: The project highlights the importance of responsive design, especially focusing on adapting the UI for smaller screen sizes like the iPhone SE.
 - **Visual Design Replication**: By replicating the Etsy UI, this project serves as an exercise in visual design and layout, demonstrating attention to detail in frontend development.
 
-This Etsy clone project is an excellent resource for exploring frontend design and responsive development, providing a hands-on example of creating a user interface that adapts to various screen sizes.
+### Getting Started
+
+To get started with this project, follow these steps:
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/your-username/etsy-clone.git
+
+2. **Navigate to the Project Directory
+     cd etsy-clone
+
+3. **Install Dependencies
+    npm install
+
+4. **Run the Development Server
+    npm run dev
