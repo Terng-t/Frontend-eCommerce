@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <NavOption />
+      <NavOption/>
       <HomeContent />
       <PopularGift />
       <About />

@@ -328,3 +328,82 @@
 .socialLoginContainer button:hover {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 }
+
+@media (max-width: 375px) {
+  .navbarContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+  }
+
+  .logoContainer,
+  .iconContainer {
+    order: 1;
+  }
+  .logoContainer {
+    margin-left: 10px;
+  }
+
+  .iconContainer {
+    flex: 1;
+    margin-left: 70px;
+  }
+  .iconContainer .icon:first-child {
+    padding: 0;
+    width: 50px;
+    font-size: 13px;
+    height: 27px;
+  }
+
+  .iconBlue {
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  .categories,
+  .search_box {
+    order: 2;
+  }
+  .categories {
+    padding: 0;
+    margin: 0;
+  }
+
+  .categories p {
+    display: none;
+  }
+
+  .categories img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+  .search_box {
+    flex: 1;
+    width: 80%;
+    margin: 5px;
+  }
+
+  .navOptionContainer {
+    display: none;
+  }
+
+  .overlay {
+  display: none;
+    width: 100%;
+  }
+  .signInPopupContainer {
+  display: none;
+  }
+
+  .categoriesDropdown {
+  display: none;
+}
+}

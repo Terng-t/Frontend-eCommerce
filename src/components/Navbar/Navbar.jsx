@@ -39,11 +39,13 @@ const Navbar = () => {
   return (
     <>
       <header className={`${styles.navbarContainer} mb-3`}>
-        <Link to="/">
+      <div className={`${styles.logoContainer}`}>
+      <Link to="/">
           <h1 className="text-orange-600 mr-0">Etsy</h1>
         </Link>
+      </div>
         <div
-          className={`${styles.categories} flex mr-5`}
+          className={`${styles.categories} flex`}
           onClick={toggleCategories}
         >
           <img className="w-[20px]" src="src\images\menu.svg" />
@@ -62,7 +64,7 @@ const Navbar = () => {
           </form>
         </div>
         <ul
-          className={`${styles.iconContainer} flex items-center space-x-4 text-gray-800 ml-5`}
+          className={`${styles.iconContainer} flex items-center space-x-4 text-gray-800`}
         >
           <li className={`${styles.icon}`} onClick={openLogin}>
             Sign in

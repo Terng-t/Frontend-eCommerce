@@ -5,7 +5,7 @@ const HomeContent = () => {
   return (
     <>
       <div className="flex grid-rows-6 justify-center p-8">
-        <h1 className="text-3xl font-extralight">Check out the season's biggest trends</h1>
+        <h1 className="text-3xl text-center font-extralight">Check out the season's biggest trends</h1>
       </div>
       <ul
         className={`${styles.cardContainer} flex gap-3 justify-center inline-block`}

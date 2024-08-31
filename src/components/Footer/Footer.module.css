@@ -9,6 +9,7 @@
 
 .emailNotiContainer h2 {
   font-size: 16px;
+  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -97,8 +98,8 @@
 
 @media (max-width: 1260px) {
   .footerContainer {
-  padding: 0;
-  flex-direction: column;
+    padding: 0;
+    flex-direction: column;
     height: 120%;
   }
 }
@@ -201,7 +202,7 @@
 }
 
 .finalContainer {
-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -227,9 +228,103 @@ flex-wrap: wrap;
   background-color: rgb(255, 255, 255, 0.18);
 }
 
-.termOfUseContainer li {
-  text-decoration: underline;
-}
 .termOfUseContainer span {
   cursor: pointer;
+}
+
+.termOfUseContainer span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 375px) {
+  .renewableContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .renewableContainer svg {
+    margin: 10px 0px;
+  }
+
+  .linkAppContainer {
+    order: 2;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .linkAppContainer div {
+    font-size: 24px;
+    height: 55px;
+    width: 55px;
+    margin: 15px;
+  }
+
+  .linkAppContainer button {
+    font-size: 14px;
+    padding: 8px;
+    margin: 0;
+  }
+
+  .footerCategoriesContainer {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .footerCategory li:first-child {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    width: auto;
+  }
+
+  .footerCategory ul li {
+    display: none
+  }
+  .socialIconContainer ul  {
+    flex-direction: row;
+    display: none;
+  }
+
+  .finalContainer {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    fill: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .finalContainer div:first-child {
+    margin: 10px;
+  }
+
+  .finalContainer div:nth-child(2) {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .finalContainer div:nth-child(2) ul {
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-right: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .finalContainer div:nth-child(2) ul li {
+    padding: 0;
+    width: 110px;
+  }
+
+  .languageContainer {
+    padding: 0;
+    margin: 0;
+  }
 }
