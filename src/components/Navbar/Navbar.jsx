@@ -39,16 +39,15 @@ const Navbar = () => {
   return (
     <>
       <header className={`${styles.navbarContainer} mb-3`}>
-      <div className={`${styles.logoContainer}`}>
-      <Link to="/">
-          <h1 className="text-orange-600 mr-0">Etsy</h1>
-        </Link>
-      </div>
-        <div
-          className={`${styles.categories} flex`}
-          onClick={toggleCategories}
-        >
-          <img className="w-[20px]" src="src\images\menu.svg" />
+        <div className={`${styles.logoContainer}`}>
+          <Link to="/">
+            <h1 className="text-orange-600 mr-0">Etsy</h1>
+          </Link>
+        </div>
+        <div className={`${styles.categories} flex`} onClick={toggleCategories}>
+          <span className="material-symbols-outlined" style={{ fontSize: 30 }}>
+            menu
+          </span>
           <p className="hover:cursor-pointer">Categories</p>
         </div>
         <div className={styles.search_box}>
@@ -59,7 +58,12 @@ const Navbar = () => {
               placeholder="Search for anything"
             />
             <button className={`${styles.searchNavbar_btn}`}>
-              <img src="src\images\search.svg" />{" "}
+              <span
+                className="material-symbols-outlined"
+                style={{ fontSize: 32, color: 'white' }}
+              >
+                search
+              </span>{" "}
             </button>
           </form>
         </div>
@@ -70,16 +74,50 @@ const Navbar = () => {
             Sign in
           </li>
           <li className={styles.iconBlue}>
-            <img src="src\images\heart.svg" alt="" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20.877 12.52c.054-.076.103-.157.147-.239A6 6 0 0 0 12 4.528a6 6 0 0 0-9.024 7.753c.044.082.093.162.147.24l.673.961a6 6 0 0 0 .789.915L12 21.422l7.415-7.025c.293-.278.557-.584.789-.915l.673-.961Zm-14.916.425L12 18.667l6.04-5.722c.195-.185.371-.39.525-.61l.673-.961a.335.335 0 0 0 .044-.087 4 4 0 1 0-7.268-2.619v.003L12 8.667l-.013.004v-.002a3.975 3.975 0 0 0-1.237-2.574 4 4 0 0 0-6.031 5.193c.009.03.023.058.043.086l.673.961a4 4 0 0 0 .526.61Z"
+              ></path>
+            </svg>
             <span className={styles.tooltip}>Favorite</span>
           </li>
           <li className={styles.iconBlue}>
-            <img src="src\images\gift.svg" alt="" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.535 7A4 4 0 0 1 12 2.354 4 4 0 0 1 18.465 7H22v9h-1v6H3v-6H2V7h3.535Zm9.466 0H13V5a2 2 0 1 1 2.001 2ZM11 5a2 2 0 1 0-2.001 2H11V5Zm-.764 4c-.55.614-1.348 1-2.236 1v2a4.978 4.978 0 0 0 3-1v3H4V9h6.236ZM13 11c.836.628 1.874 1 3 1v-2a2.992 2.992 0 0 1-2.236-1H20v5h-7v-3Zm-8 5v4h6v-4H5Zm8 4v-4h6v4h-6Z"
+              ></path>
+            </svg>
             <span className={styles.tooltip}>Gift Mode</span>
           </li>
           <Link to="/cart">
             <li className={styles.iconBlue}>
-              <img src="src\images\cart.svg" alt="cart" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="m5.766 5-.618-3H1v2h2.518l2.17 10.535L6.18 17h14.306l2.4-12H5.767ZM7.82 15l-1.6-8h14.227l-1.6 8H7.82Z"
+                ></path>
+                <path d="M10.666 20.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm8.334 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path>
+              </svg>
             </li>
           </Link>
         </ul>
