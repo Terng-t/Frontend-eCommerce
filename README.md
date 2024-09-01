@@ -6,7 +6,7 @@ Welcome to the Etsy Clone project! This project is a UI-focused replica of the p
 
 ### Deployment
 
-The application is deployed and can be accessed at the following URL: [Etsy Clone Live](https://your-deployment-url.com](https://frontend-e-commerce-rouge.vercel.app).
+The application is deployed and can be accessed at the following URL: [Etsy Clone Live](https://frontend-e-commerce-rouge.vercel.app).
 
 ### Key Features
 
