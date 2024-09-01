@@ -4,6 +4,10 @@
 
 Welcome to the Etsy Clone project! This project is a UI-focused replica of the popular online marketplace, Etsy. It is designed to closely emulate the visual design and layout of Etsy, providing a realistic look and feel of the site without any backend functionality.
 
+### Deployment
+
+The application is deployed and can be accessed at the following URL: [Etsy Clone Live](https://your-deployment-url.com](https://frontend-e-commerce-rouge.vercel.app).
+
 ### Key Features
 
 - **Responsive Design**: The UI is fully responsive, with specific adjustments made to ensure optimal display on various devices, including a tailored experience for the iPhone SE.
